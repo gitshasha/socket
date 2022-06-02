@@ -1,6 +1,8 @@
-const io = require("socket.io")(8900, {
+const PORT = process.env.PORT;
+
+const io = require("socket.io")(PORT || 8900, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://findeve.herokuapp.com",
   },
 });
 
